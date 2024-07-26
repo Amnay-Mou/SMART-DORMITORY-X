@@ -1,0 +1,194 @@
+html {
+    font-size: 62.5%; /* Setting base font size for easier rem calculations */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Including padding and border in element's total width and height */
+}
+
+ul, li {
+    list-style: none;
+}
+
+input {
+    border: none;
+}
+
+body {
+    font-size: 1.6rem; /* Setting base font size */
+    width: 100%; /* Adjusting width to fit different screen sizes */
+}
+
+.home-gQC {
+    width: 100%;
+    height: auto; /* Making height auto to adjust to content */
+    position: relative;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+/* Adjusting dimensions using percentages for flexibility */
+.home-gQC .up-7kQ {
+    padding: 2% 5% 1.5% 5%; /* Adjusting padding */
+    width: 100%;
+    height: auto;
+    position: relative; /* Changing position to relative */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: 100%; /* Adjusting background size */
+    background-position: center; /* Centering background */
+    background-image: url('../assets/bg-bg.png');
+}
+
+/* Adjusting dimensions using percentages for flexibility */
+.home-gQC .up-7kQ .logo-txt-j9W {
+    margin: 0 auto; /* Centering */
+    width: 70%; /* Adjusting width */
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Adjusting dimensions using percentages for flexibility */
+.home-gQC .up-7kQ .logo-txt-j9W .rectangle-2-CHz {
+    width: 100%; /* Adjusting width */
+    height: auto; /* Making height auto */
+}
+
+/* Adjusting font size using em for flexibility */
+.home-gQC .up-7kQ .logo-txt-j9W .smart-dormitory-x-K7i {
+    font-size: 2em; /* Adjusting font size */
+    margin-top: 0.5em; /* Adding margin top */
+}
+
+/* Adjusting dimensions using percentages for flexibility */
+.home-gQC .up-7kQ .event-login-bb2 {
+    width: 90%; /* Adjusting width */
+    height: auto;
+    display: flex;
+    flex-direction: row; /* Changing flex direction to row */
+    justify-content: space-between; /* Aligning items */
+    margin-top: 3%; /* Adding margin top */
+}
+
+/* Adjusting dimensions using percentages for flexibility */
+.home-gQC .up-7kQ .event-login-bb2 .event-YFN,
+.home-gQC .up-7kQ .event-login-bb2 .login-DJt {
+    width: 48%; /* Adjusting width */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25); /* Adjusting box shadow */
+}
+
+/* Adjusting dimensions using percentages for flexibility */
+.home-gQC .up-7kQ .event-login-bb2 .event-YFN .auto-group-tzxr-kMS,
+.home-gQC .up-7kQ .event-login-bb2 .login-DJt .i-forget-password-MR6 {
+    width: 90%; /* Adjusting width */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25); /* Adjusting box shadow */
+    background-color: #e9eaf5;
+    padding: 2% 5% 5% 5%; /* Adjusting padding */
+    margin-bottom: 3%; /* Adding margin bottom */
+}
+
+/* Adjusting font size using em for flexibility */
+.home-gQC .up-7kQ .event-login-bb2 .event-YFN .auto-group-tzxr-kMS .event-title-UHS {
+    font-size: 2em; /* Adjusting font size */
+}
+
+/* Adjusting font size using em for flexibility */
+.home-gQC .up-7kQ .event-login-bb2 .event-YFN .auto-group-tzxr-kMS .event-details--JQt {
+    font-size: 1.6em; /* Adjusting font size */
+}
+
+/* Adjusting font size using em for flexibility */
+.home-gQC .up-7kQ .event-login-bb2 .event-YFN .auto-group-tzxr-kMS .event-details--JQt .event-details--JQt-sub-1 {
+    font-size: 1.4em; /* Adjusting font size */
+}
+
+/* Adjusting font size using em for flexibility */
+.home-gQC .up-7kQ .event-login-bb2 .login-DJt .enter-user-pass-ddW {
+    width: 90%; /* Adjusting width */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25); /* Adjusting box shadow */
+    background-color: #efa9a9;
+    margin-top: 3%; /* Adding margin top */
+    padding: 5%; /* Adjusting padding */
+}
+
+/* Adjusting font size using em for flexibility */
+.home-gQC .up-7kQ .event-login-bb2 .login-DJt .enter-user-pass-ddW .auto-group-nneq-vcc,
+.home-gQC .up-7kQ .event-login-bb2 .login-DJt .enter-user-pass-ddW .auto-group-ywbw-6fW {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5em 0; /* Adjusting padding */
+}
+
+/* Adjusting font size using em for flexibility */
+.home-gQC .up-7kQ .event-login-bb2 .login-DJt .i-forget-password-MR6 {
+    font-size: 2em; /* Adjusting font size */
+    margin-bottom: 1em; /* Adding margin bottom */
+}
+
+/* Adjusting dimensions using percentages for flexibility */
+.home-gQC .footer-XeL {
+    width: 100%;
+    height: auto;
+    background-color: black; /* Adding background color */
+    display: flex;
+    justify-content: center;
+    padding: 5% 0; /* Adjusting padding */
+}
+
+/* Adjusting dimensions using percentages for flexibility */
+.home-gQC .footer-XeL .frame-1-Eoe {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Adjusting dimensions using percentages for flexibility */
+.home-gQC .footer-XeL .frame-1-Eoe .icons-zH2 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5%; /* Adding margin bottom */
+}
+
+/* Adjusting dimensions using percentages for flexibility */
+.home-gQC .footer-XeL .frame-1-Eoe .text-D3J {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Adjusting font size using em for flexibility */
+.home-gQC .footer-XeL .frame-1-Eoe .text-D3J p {
+    font-size: 1.6em; /* Adjusting font size */
+    cursor: pointer; /* Adding cursor pointer */
+}
+
+/* Adjusting dimensions using percentages for flexibility */
+.home-gQC .footer-XeL .frame-1-Eoe .text-D3J .terms-conditions-stY {
+    margin-left: 1%; /* Adding margin left */
+}

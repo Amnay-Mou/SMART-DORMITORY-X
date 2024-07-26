@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/logo.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/animate.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/odometer.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/nice-select.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/jquery.animatedheadline.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}">
+    <title>Wechat</title>
+    <style>
+        .contact-section {
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center;     /* Center vertically */
+            height: 100vh;           /* Make the section take full viewport height */
+        }
+        .bg-thumb {
+            width: 600px;
+            height: 600px;
+            background-size: cover; /* Adjust as needed */
+            background-position: center; /* Adjust as needed */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ==========Preloader========== -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- ==========Preloader========== -->
+    <video autoplay muted loop id="myVideo">
+        <source src="/video/back.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <!-- ==========Overlay========== -->
+    <div class="overlay"></div>
+    <a href="#0" class="scrollToTop">
+        <i class="fas fa-angle-up"></i>
+    </a>
+    <!-- ==========Overlay========== -->
+
+    <!-- ==========Header-Section========== -->
+    <header class="header-section">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo">
+                    <a href="login">
+                        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="logo">
+                    </a>
+                </div>
+                <ul class="menu">
+                    <li>
+                        <a href="login" class="active">Home</a>
+                    </li>
+                    <li>
+                        <a href="pgaboutws">About Us</a>
+                    </li>
+                    <li class="header-button pr-0">
+                        <a href="login">Join Us</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </header>
+    <!-- ==========Header-Section========== -->
+
+    <!-- ==========Banner-Section========== -->
+    <section class="main-page-header speaker-banner bg_img">
+        <div class="container">
+            <div class="speaker-banner-content">
+                <h2 class="title">Wechat</h2>
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="login">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        wechat
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- ==========Banner-Section========== -->
+
+    <!-- ==========Contact-Section========== -->
+    <section class="contact-section padding-top">
+        <div class="bg-thumb bg_img" data-background="{{ url_for('static', filename='img/wexat3.png') }}"></div>
+    </section>
+    <!-- ==========Contact-Section========== -->
+    <script src="{{ url_for('static', filename='assets/js/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/modernizr-3.6.0.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/plugins.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/magnific-popup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/wow.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/countdown.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/odometer.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/viewport.jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/nice-select.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>All Users</title>
+<link rel="shortcut icon" href= "{{ url_for('static', filename='img/logo.png') }}" type="image/x-icon">
+<link rel="stylesheet" href= "{{ url_for('static', filename='css/stl.css') }}">
+<style>
+    html {
+        font-family: Arial, sans-serif;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        /* Adjust the path based on your directory structure */
+        background-image: url('/static/img/bgusers.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    .highlight {
+        background-color: red;
+    }
+
+</style>
+{% endblock %}
+
+{% block body %}
+
+
+<div class="ALL">
+    <h1 style="text-align: center" class="title">Hello <span>{{ current_user.username }}</span><span class="siz">, All users</span></h1>
+    <div class="search">
+        <form action="/searchuser" method="GET">
+            <input type="text" name="query" placeholder="Search users">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    {% if tasks|length < 1 %}
+    <h4 style="text-align: center">There are no tasks. Create one below!</h4>
+    {% else %}
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Role</th>
+            <th>Nationality</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Birthday</th>
+            <th>Email</th>
+            <th>Major</th>
+        </tr>
+        {% for task in tasks %}
+            <tr>
+                <td>{{ task.iduser }}</td>
+                <td>{{ task.username }}</td>
+                <td>{{ task.role }}</td>
+                <td>{{ task.nationality }}</td>
+                <td>{{ task.age }}</td>
+                <td>{{ task.gender }}</td>
+                <td>{{ task.birthday }}</td>
+                <td>{{ task.email }}</td>
+                <td>{{ task.major }}</td>
+                <td>
+                    <br>
+                    <a href="/delete/{{task.iduser}}">Delete</a>
+                    <br>
+                    <a href="/updateuserad/{{task.iduser}}">Update</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+
+</div>
+<br><br><br><footer class="ttt"><a title="Go back to Menu" href="admin_dashboard" target="_blank"><img src="{{ url_for('static', filename='img/daxb1.png') }}"></a>SDX Menu</footer>
+{% endblock %}

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/all.min.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/animate.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/flaticon.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/odometer.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/nice-select.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/main.css') }}">
+
+    <link rel="shortcut icon" href= "{{ url_for('static', filename='img/logo.png') }}" type="image/x-icon">
+    <title>SDX - register</title>
+</head>
+<body>
+    <!-- ==========Preloader========== -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- ==========Preloader========== -->
+    <video autoplay muted loop id="myVideo">
+      <source src= "{{ url_for('static', filename='assets/video/back.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <!-- ==========Sign-In-Section========== -->
+    <section class="account-section bg_img">
+        <div class="container">
+            <div class="padding-top padding-bottom">
+                <div class="account-area">
+                    <div class="section-header-3">
+                        <span class="cate">welcome</span>
+                        <h2 class="title">SDX </h2>
+                    </div>
+                    <form class="account-form" action="register" method="post">
+						<div class="form-group">
+                            <label for="email">Email<span>*</span></label>
+                            <input type="email" placeholder="Email should content '@' " id="email" required name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password<span>*</span></label>
+                            <input type="password" placeholder="Password " id="password" required name="password">
+                        </div>
+						<div class="form-group">
+                            <label for="birthday">Birthday<span>*</span></label>
+                            <input type="date" placeholder="Birthday "  id="birthday" required name="birthday">
+                        </div>
+                        <div class="form-group">
+                            <label for="age">Age<span>*</span></label>
+                            <input type="number" placeholder="Age " id="age" required name="age" >
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">Gender<span>*</span></label>
+                            <input type="text" placeholder="Gender " id="gender" required name="gender" >
+                        </div>
+                        <div class="form-group">
+                            <label for="username">Username<span>*</span></label>
+                            <input type="text" placeholder="Username " id="username" required name="username" >
+                            {% if error_message %}
+                                <p class="flash-w"><strong>Error</strong>: {{ error_message }}</p>
+                            {% endif %}
+                        </div>
+                        <div class="form-group">
+                            <label for="nationality">Nationality<span>*</span></label>
+                            <input type="text" placeholder="Nationality " id="nationality" required name="nationality" >
+                        </div>
+                        <div class="form-group">
+                            <label for="major">Major<span>*</span></label>
+                            <input type="text" placeholder="Major " id="major" required name="major" >
+                        </div>
+
+                        <!--  |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||  -->
+
+                        <div class="form-group">
+                        <label for="major">Room Type<span>*</span></label>
+                        <select class="bklist" name="room_type" id="room_type" required="true">
+                            <option value="single">Single</option>
+                            <option value="double">Double</option>
+                        </select>
+
+                        <label id="single_rooms_label" style="display: none;">Single Rooms:</label>
+                        <select class="bklist" name="roomnum_single" id="roomnum_single" style="display: none;" required="true">
+                            {% for room_num in srn %}
+                                <option value="{{ room_num }}">{{ room_num }}</option>
+                            {% endfor %}
+                        </select>
+
+                        <label id="double_rooms_label" style="display: none;">Double Rooms:</label>
+                        <select class="bklist" name="roomnum_double" id="roomnum_double" style="display: none;" required="true">
+                            {% for room_num in drn %}
+                                <option value="{{ room_num }}">{{ room_num }}</option>
+                            {% endfor %}
+                        </select>
+                        </div>
+                        <!--  |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||  -->
+                        <div class="form-group">
+                            <label for="codevrf">Code Verification<span>*</span></label>
+                            <input type="text" placeholder="Code Verification"  id="codevrf" required name="codevrf">
+                        </div>
+                        <div class="form-group checkgroup">
+							<input type="radio" name="radio" id="radio" required>
+                            <label for="radio">I agree to the <a href="#0">Terms, Privacy Policy</a> and <a href="#0">Fees</a></label>
+                        </div>
+                        <div class="form-group text-center">
+                            <button type="submit" class="register-btn" id="registerBtn" disabled>Register</button>
+                        </div>
+                    </form>
+                    <div class="option">
+                        Already have an account? <a href="login">Login</a>
+                    </div>
+                    <div class="or"><span>Or</span></div>
+                    <ul class="social-icons">
+                        <li>
+                            <a href="#0">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#0" class="active">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#0">
+                                <i class="fab fa-google"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==========Sign-In-Section========== -->
+    <script>
+	    const emailInput = document.getElementById('email');
+	    const passwordInput = document.getElementById('password');
+	    const codevrfInput = document.getElementById('codevrf');
+	    const birthdayInput = document.getElementById('birthday');
+	    const usernameInput = document.getElementById('username');
+	    const nationalityInput = document.getElementById('nationality');
+	    const genderInput = document.getElementById('gender');
+	    const ageInput = document.getElementById('age');
+	    const majorInput = document.getElementById('major');
+	    const registerBtn = document.getElementById('registerBtn');
+	    const radioBtn = document.getElementById('radio');
+	
+	    const inputs = [emailInput, passwordInput, codevrfInput, birthdayInput, usernameInput, nationalityInput,
+	    genderInput, ageInput];
+	
+	    function checkInputs() {
+	      const isRadioChecked = radioBtn.checked;
+	      const areInputsFilled = inputs.every(input => input.value !== '');
+	      registerBtn.disabled = !(isRadioChecked && areInputsFilled);
+	    }
+	
+	    radioBtn.addEventListener('change', checkInputs);
+	    inputs.forEach(input => input.addEventListener('input', checkInputs));
+   </script>
+
+    <script src= "{{ url_for('static', filename='assets/js/jquery-3.3.1.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/modernizr-3.6.0.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/plugins.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/isotope.pkgd.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/magnific-popup.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/owl.carousel.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/wow.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/countdown.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/odometer.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/viewport.jquery.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/nice-select.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/main.js') }}"></script>
+    <script>
+    document.getElementById('room_type').addEventListener('change', function() {
+        var roomType = this.value;
+
+        // Hide both room select elements
+        document.getElementById('single_rooms_label').style.display = 'none';
+        document.getElementById('roomnum_single').style.display = 'none';
+        document.getElementById('double_rooms_label').style.display = 'none';
+        document.getElementById('roomnum_double').style.display = 'none';
+
+        // Show the appropriate room select based on the user choice
+        if (roomType === 'single') {
+            document.getElementById('single_rooms_label').style.display = 'block';
+            document.getElementById('roomnum_single').style.display = 'block';
+        } else if (roomType === 'double') {
+            document.getElementById('double_rooms_label').style.display = 'block';
+            document.getElementById('roomnum_double').style.display = 'block';
+        }
+    });
+</script>
+
+</body>
+
+</html>

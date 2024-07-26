@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forgot Password</title>
+    <link rel="shortcut icon" href= "{{ url_for('static', filename='img/logo.png') }}" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url("static/img/forgetbg.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+        .container {
+            max-width: 400px;
+            width: 90%;
+            padding: 20px;
+            background-color: #00000080;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .search-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        input[type="email"] {
+            padding: 10px;
+            margin-top: 40px;
+            width: 90%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+        }
+        button[type="submit"] {
+            padding: 10px 40px;
+            background-image: -webkit-linear-gradient(45deg, #57B6E5 17%, #1E678C 63%, #57B6E5 100%);
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            outline: none;
+            transition: background-color 0.3s ease;
+            margin-top: 15px;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        h2, h4 {
+            text-align: center;
+            color: #fff;
+        }
+        h4.error-message {
+            color: #dc3545;
+        }
+
+        footer {
+            text-align: center;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #ffffff80;
+            padding: 10px 0;
+        }
+        .ttt {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         text-align: center;
+         color: #fff;
+        }
+
+    .ttt img {
+        vertical-align: middle; /* Align image vertically */
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 style="text-align: center;">Forgot Password</h2>
+        <div class="search-form">
+            <form action="/forgetpassword" method="GET">
+                <input type="email" name="query" placeholder="Enter Email">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        {% if tasks and search_attempted %}
+            <h4>Check your email for password reset instructions.</h4>
+        {% elif search_attempted %}
+            <h4>No user found with this email. <a href="register">Please register first!</a></h4>
+        {% endif %}
+
+    </div>
+</body>
+    <footer class="ttt">
+        <a title="Go back to Menu" href="login">
+            <img src="{{ url_for('static', filename='img/daxb1.png') }}" alt="SDX Menu">
+            SDX Menu
+        </a>
+    </footer>
+
+</html>

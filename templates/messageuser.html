@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>All Messages</title>
+<link rel="shortcut icon" href= "{{ url_for('static', filename='img/logo.png') }}" type="image/x-icon">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/stl.css') }}">
+<style>
+    html{
+        background-image: url('/static/img/bg.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+<div class="ALL">
+    {% if current_user.iduser == 9 %}<!--<h1 style="text-align: center">Admin <span>Message</span></h1>-->
+        <h1 style="text-align: center">User <span>Message</span></h1>
+    {% else %}
+        <h1 style="text-align: center">Admin <span>Message</span></h1>
+    {% endif %}
+    <div class="search">
+        <form action="/seachreply" method="GET">
+            <input type="text" name="query" placeholder="Search Message">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    {% if info|length < 1 %}
+    <h4 style="text-align: center">There are no Message for You.</h4>
+    {% else %}
+    <table>
+        <tr>
+<!--        <th>Message ID</th>-->
+<!--        <th>Send To</th>-->
+            <th>Reply</th>
+            <th>Message</th>
+            <th>Date</th>
+<!--        <th>send By</th>-->
+        </tr>
+        {% for mssg in info %}
+            <tr>
+<!--            <td>{{ mssg.idcnt }}</td>-->
+<!--            <td>{{ mssg.userid }}</td>-->
+                <td>{{ mssg.userreply }}</td>
+                <td class="left">{{ mssg.message }}</td>
+                <td>{{ mssg.date }}</td>
+<!--            <td>{{ mssg.idusr }}</td>-->
+                <td>
+                    <br>
+                    <a href="/dltmssgAD_USR/{{mssg.idcnt}}">Delete</a>
+                    <br><a href="/contactAd/{{ mssg.idcnt }}">reply</a>
+<!--                <a href="/contactuser/{{mssg.idcnt}}">Reply</a>     wait-->
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+<br><br>
+</div>
+<br><br><br>
+<footer class="ttt">
+    <a title="Go back to Menu" href="{% if current_user.iduser == 9 %}{{ url_for('admin_dashboard') }}{% else %}{{ url_for('dashboard') }}{% endif %}">
+        <img src="{{ url_for('static', filename='img/daxb1.png') }}">
+    </a>
+    SDX Menu
+</footer>
+{% endblock %}

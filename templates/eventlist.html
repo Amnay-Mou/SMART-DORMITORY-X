@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>All Events</title>
+<link rel="shortcut icon" href= "{{ url_for('static', filename='img/logo.png') }}" type="image/x-icon">
+<link rel="stylesheet" href= "{{ url_for('static', filename='css/stlevent.css') }}">
+<style>
+    html {
+        font-family: Arial, sans-serif;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background-image: url('/static/img/event.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    .highlight {
+        background-color: red;
+    }
+
+</style>
+{% endblock %}
+{% block body %}
+<div class="ALL">
+    <h1 style="text-align: center" class="title">Hello <span>{{ current_user.username }}</span><span class="siz">, Event Control</span></h1>
+    <div class="search">
+        <form action="/searchevent" method="GET">
+            <input type="text" name="query" placeholder="Search Event">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    {% if evnt|length < 1 %}
+    <h4 style="text-align: center">There are no tasks. Create one below!</h4>
+    {% else %}
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Event Details</th>
+            <th>Picture</th>
+        </tr>
+        {% for task in evnt %}
+            <tr>
+                <td>{{ task.idevent }}</td>
+                <td>{{ task.title }}</td>
+                <td>{{ task.eventdetails }}</td>
+                <td><img  src="{{ url_for('static', filename=task.picture) }}" /></td>
+                <td>
+                    <br>
+                    <a href="/eventupdate/{{task.idevent}}">Update</a>
+                    <br>
+                    <a href="/deletevent/{{task.idevent}}">Delete</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+    <a href="addevent" class="aa">Add Event</a>
+
+</div>
+<br><br><br><footer class="ttt"><a title="Go back to Menu" href="admin_dashboard" target="_blank"><img src="{{ url_for('static', filename='img/daxb1.png') }}"></a>SDX Menu</footer>
+{% endblock %}

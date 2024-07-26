@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>room</title>
+</head>
+<body>
+    single {{ srn }}<br>
+    double {{ drn }}<br>
+    <div class="two">
+        <label>Choose Room Type:</label>
+        <select name="room_type" id="room_type" required="true">
+            <option value="single">Single</option>
+            <option value="double">Double</option>
+        </select>
+        <!-- Render both room select elements initially but hide them -->
+        <label id="single_rooms_label" style="display: none;">Single Rooms:</label>
+        <select name="sg" id="single_rooms" style="display: none;" required="true">
+            {% for room_num in srn %}
+                <option value="{{ room_num }}">{{ room_num }}</option>
+            {% endfor %}
+        </select>
+
+        <label id="double_rooms_label" style="display: none;">Double Rooms:</label>
+        <select name="db" id="double_rooms" style="display: none;" required="true">
+            {% for room_num in drn %}
+                <option value="{{ room_num }}">{{ room_num }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <script>
+        // Function to show appropriate room selection based on user choice
+        document.getElementById('room_type').addEventListener('change', function() {
+            var roomType = this.value;
+
+            // Hide both room select elements
+            document.getElementById('single_rooms_label').style.display = 'none';
+            document.getElementById('single_rooms').style.display = 'none';
+            document.getElementById('double_rooms_label').style.display = 'none';
+            document.getElementById('double_rooms').style.display = 'none';
+
+            // Show the appropriate room select based on the user choice
+            if (roomType === 'single') {
+                document.getElementById('single_rooms_label').style.display = 'block';
+                document.getElementById('single_rooms').style.display = 'block';
+            } else if (roomType === 'double') {
+                document.getElementById('double_rooms_label').style.display = 'block';
+                document.getElementById('double_rooms').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+<footer class="cd__credit">SDX <a title="Go back to Menu" href="dashboard" target="_blank">Menu</a></footer>
+</html>
