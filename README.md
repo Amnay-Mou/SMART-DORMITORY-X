@@ -15,6 +15,6 @@ E-R diagram:
 ![image](https://github.com/user-attachments/assets/c66b734b-48a7-447a-b536-fa89a78dab29)
 
 Home page:
-![image](https://github.com/user-attachments/assets/da6e95ce-818e-4d4d-aab7-93ba38897290)
 
+![image](https://github.com/user-attachments/assets/da6e95ce-818e-4d4d-aab7-93ba38897290)
 ![image](https://github.com/user-attachments/assets/da6e95ce-818e-4d4d-aab7-93ba38897290)
