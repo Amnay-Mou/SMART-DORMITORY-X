@@ -33,5 +33,13 @@ Keywords: Management System, Python Flask, Dormitory, MySQL, Database.
 ![image](https://github.com/user-attachments/assets/b66c13db-9d59-4f31-a05b-5673c9de2522)
 
 After full all information & check i read .... the button will be Enable:
+
 ![image](https://github.com/user-attachments/assets/773996ed-fd07-4846-93e8-dfb4631adf17)
+
+**Student Dashboard page:**
+The menu of services for the student is represented in the student dashboard, after the successful login, and the system checks that the role of the user is equal to 1, the SDX redirects to: http://127.0.0.1:5000/dashboard The first part of the interface shows the username of the user and the option to logout, the logo (redirects you to the home page), and the Contact Us service.
+![image](https://github.com/user-attachments/assets/d59c8792-0063-413b-9f19-fd505c6e1cb0)
+
+![image](https://github.com/user-attachments/assets/eadaa767-0c8f-4e8a-97f4-863ac7317907)
+
 
