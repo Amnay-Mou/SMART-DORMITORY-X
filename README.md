@@ -7,9 +7,11 @@ Keywords: Management System, Python Flask, Dormitory, MySQL, Database.
 ![image](https://github.com/user-attachments/assets/f91e633d-4324-4b02-a786-134a17432654) / ![image](https://github.com/user-attachments/assets/bb7bbdec-535f-4488-a09e-65c0e2a2ccf1)
 
 The architectural diagram:
+
 ![image](https://github.com/user-attachments/assets/29ebf796-4e7e-498c-84a5-9ff3f78cce2b)
 
 E-R diagram:
+
 ![image](https://github.com/user-attachments/assets/c66b734b-48a7-447a-b536-fa89a78dab29)
 
 Home page:
