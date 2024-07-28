@@ -5,3 +5,14 @@ The goal of Smart Dormitory X (SDX) is to make dormitory management simpler, eas
 Keywords: Management System, Python Flask, Dormitory, MySQL, Database.
 
 ![image](https://github.com/user-attachments/assets/f91e633d-4324-4b02-a786-134a17432654) / ![image](https://github.com/user-attachments/assets/bb7bbdec-535f-4488-a09e-65c0e2a2ccf1)
+
+The architectural diagram:
+![image](https://github.com/user-attachments/assets/29ebf796-4e7e-498c-84a5-9ff3f78cce2b)
+
+E-R diagram:
+![image](https://github.com/user-attachments/assets/c66b734b-48a7-447a-b536-fa89a78dab29)
+
+Home page:
+![image](https://github.com/user-attachments/assets/da6e95ce-818e-4d4d-aab7-93ba38897290)
+![image](https://github.com/user-attachments/assets/ea3a501b-5a16-48e1-90e2-bda1d1b263ed)
+![image](https://github.com/user-attachments/assets/da6e95ce-818e-4d4d-aab7-93ba38897290)
