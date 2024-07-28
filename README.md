@@ -20,11 +20,14 @@ Home page:
 ![image](https://github.com/user-attachments/assets/2a0b8bca-a54b-4581-9f3a-d828aec6e8b7)
 
 Login error message in home page:
+
 ![image](https://github.com/user-attachments/assets/d5d03d46-2286-4de3-b6e3-fcb9b71264a1)
 
 Successful logout message on the home page:
+
 ![image](https://github.com/user-attachments/assets/7e3872e4-3c7c-489a-b581-dfcb165ac7f3)
 
 Registration page:
+
 ![image](https://github.com/user-attachments/assets/b665e299-5ac3-4798-8a9f-bd1933e46ce8)
 ![image](https://github.com/user-attachments/assets/b66c13db-9d59-4f31-a05b-5673c9de2522)
