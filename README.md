@@ -15,19 +15,30 @@ Keywords: Management System, Python Flask, Dormitory, MySQL, Database.
 ![image](https://github.com/user-attachments/assets/c66b734b-48a7-447a-b536-fa89a78dab29)
 
 **Python**
+
 	Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.
 Python is dynamically typed, and garbage collected. It supports multiple programming paradigms, including structured (particularly procedural), object-oriented, and functional programming. It is often described as a "batteries included" language due to its comprehensive standard library. Python consistently ranks as one of the most popular programming languages and has gained widespread use in the machine-learning community.
+
 **Python Flask**
+
   The Model-View-Controller (MVC) framework has become the standard in modern software development, with the model layer, display layer, and controller layer making it easier and faster. The Flask is a framework that uses Python language with easy-to-understand code writing. However the Flask framework still doesn't use the MVC method, so files and codes are not regular. The purpose of this study was to design an MVC for a framework that uses the Python programming language. This system has a generator that can make MVC folder structure easily and quickly, this system is also equipped with the Bootstrap framework, and this system is open source. The results showed that the presence of MVC on the Flask framework could enable users easier in create new projects and have a faster full load time.
 To ensure that the environment has a better experience using Flask and gets all the library needs I chose PyCharm, its integrated development environment used for programming in Python.
 Python Flask, these frameworks offer similar functionalities and capabilities for developing web applications, providing a standardized platform for building B/S architecture software. Additionally, Python Flask is well-suited for developing web applications in Python, offering simplicity, flexibility, and scalability. Both Python Flask encompasses various features and tools to streamline development processes and meet the specific functional requirements of your project.
+
 **SQLAlchemy**
+
   Mike B. (2015), SQLAlchemy Documentation states, “The SQLAlchemy SQL Toolkit and Object Relational Mapper is a comprehensive set of tools for working with databases and Python. It has several distinct areas of functionality which can be used individually or combined.” SQLAlchemy provides a flexible and powerful toolkit for interacting with databases in Python, allowing developers to work with databases using Pythonic syntax and patterns. With SQLAlchemy, developers can create, query, and manipulate database objects using an expressive and intuitive API.
+
 **Flask-SQLAlchemy**
+
   Flask SQLAlchemy is a dynamic database toolkit tailored for Flask. It offers an intuitive interface for database operations within Flask apps, capitalizing on the capabilities of SQLAlchemy, a renowned object-relational mapping (ORM) library in Python. Object-relational mapping, commonly known as ORM, is a programming technique that seamlessly connects the dots between databases and object-oriented programming languages. Imagine a scenario where you have a table in a database, and instead of writing lengthy SQL queries to interact with it, you could treat that table just like an object in your code. That’s precisely what ORM allows you to do.
+
 **Bcrypt**
+
   Bcrypt is a hash function created by Niels Provos and David Mazières. It is based on the Blowfish encryption algorithm and was presented at USENIX in 19991. In addition to the use of salt to protect against rainbow table attacks, bcrypt is an adaptive function, that is to say, we can increase the number of iterations to make it slower. Thus, it continues to be resistant to brute force attacks despite the increase in computing power.
+
 **MySQL**
+
   MySQL is a relational database system. Many fanatical MySQL enthusiasts think that MySQL is quicker, more reliable, and cheaper than any other database system (including commercial systems like Oracle and DB2). Many MySQL opponents continue to challenge this viewpoint, going even so far as to assert that MySQL is not even a relational database system. And to make it more clear MySQL is an Oracle-backed open-source relational database management system (RDBMS) based on Structured Query Language (SQL). MySQL runs on virtually all platforms, including Linux, UNIX, and Windows. Although it can be used in a wide range of applications, MySQL is most often associated with web applications and online publishing. MySQL is an important component of an open-source enterprise stack called LAMP. LAMP is a web development platform that uses Linux as the operating system, Apache as the web server, MySQL as the relational database management system, and PHP as the object-oriented scripting language. (Sometimes Perl or Python is used instead of PHP). MySQL is Characterized by bright features (Relational Database System, Client/Server Architecture, SQL compatibility …).
 
 
