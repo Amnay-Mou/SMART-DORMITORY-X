@@ -49,10 +49,18 @@ The interface of the profile shows the information for the current user (birthda
 
 ![image](https://github.com/user-attachments/assets/510594b3-b990-4f58-9d08-cd87c2684266)
 
+After Click on 'Update' Button:
+
 ![image](https://github.com/user-attachments/assets/7c853335-5dba-49f7-ba62-53eb1aa3420e)
+
+After Click on 'Message' Button:
 
 ![image](https://github.com/user-attachments/assets/dfecc4c8-3d8d-4ef9-8837-4da272ce4182)
 
+After Click on 'Reply' Super link:
+
 ![image](https://github.com/user-attachments/assets/a6e95adc-92ae-4305-b2fc-b380b1545573)
+
+Profile interfaces Schema:
 
 ![image](https://github.com/user-attachments/assets/4c345804-5770-4deb-911b-a469339ad198)
