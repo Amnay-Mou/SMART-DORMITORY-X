@@ -93,3 +93,48 @@ After Click on 'Reply' Super link:
 Profile interfaces Schema:
 
 ![image](https://github.com/user-attachments/assets/4c345804-5770-4deb-911b-a469339ad198)
+
+**Add payment page:**
+
+http://127.0.0.1:5000/infopay. The new payment UI is user-friendly since the user is enabled to enter the amount, and the card number, and to choose the service, and card type by a drop-down. Completion of the transaction is simply a click on the ‘Pay’ button. The interface has been created with Flask and supports GET and POST requests for the smooth processing of form submissions, with error handling done through rollback mechanisms for data integrity. Enhanced with scripts and style sheets, the HTML layout creates a neat, responsive user interface with a welcome banner and good client-side validations to ensure security. That is why this design does not just ease the whole process of payment; it is in line with all the top data protection policies.
+
+![image](https://github.com/user-attachments/assets/796c818b-ad72-447f-98f7-5543fa66d5af)
+
+**Payments history page:**
+
+The payment interface for the web page, http://127.0.0.1:5000/payment , is built using Python Flask; it's simple, easy and secure. It was constructed so that it could serve GET and POST requests for viewing and manipulation payment records with help of SQLAlchemy. It was additionally built to prevent unauthorized data access by any user through the Flask @login_required decorator. The data interface greets the user by his name and lists payment history, which can be edited or deleted. Furthermore, it has an easy possibility to add a new payment by clicking the "Add New Payment" link. This is designed to be responsive, attractive to view, and uses a number of local resources as well as animate.css resources for its CSS to use the highest standards of data safety. This further improves usability and also provides safety with regard to financial data management.
+
+![image](https://github.com/user-attachments/assets/f9b06fb1-5c6f-4f24-85e8-e06cd64f8880)
+
+**Update payment page**
+
+Another obvious user-centered and simple design from the SDX system is the Update Payment Web Interface. This interface allows secure and convenient updating of payment information: card number, card type, payment amount, and service type in a well-structured layout, thus ensuring simplicity and accessibility. It features clean and clear fields, big enough to view the details of the last payment. The system guarantees updated data because the backend system is seamless, and the data is updated. It includes checks for validation to avoid wrong data entry, dynamical correction of errors before form submission, and uses POST methods to assure secure data transmission.
+Security and user experience are the leading priorities in the design and functionality of the interface. The system secures sensitive payment information using strong measures such as HTTPS and strict data validation, thus eliminating SQL injection, XSS, and other security vulnerabilities. In this situation, if the changes are not going through, then the user is immediately aware of it and, in turn, has a sense of reliability and trust. The HTML of the interface is formatted for accessibility, thus making screen readers perform better. There is also responsive CSS that makes this interface usable on any device. Also, the Python Flask backend handles the request and database interactions very efficiently and safely, so updating the payment is a very safe and effective process.
+
+![image](https://github.com/user-attachments/assets/dec7359b-0a5d-4123-a9f1-3c98bdf1a08a)
+
+**Contact administration page**
+
+The form “Contact administration” provides a simple way the users can address their grievances. They can fill out a long note that describes their issue and, if necessary, they can specify it as an emergency. This form is submitted the moment they feed in all the necessary details and press the "Submit" button. This UI leverages the simple animations in Bootstrap.min.css and, above all, the "Submit" button remains disabled until all fields are filled in. A floating button supports navigation, it provides the ability to scroll back to the top of the page without sudden snap. A hyperlink is added in the Banner section to the home page, which is further supported by an attractive image to make the page more beautiful.
+
+![image](https://github.com/user-attachments/assets/ea3854ad-9e39-43e0-b0fd-af2c5f56a811)
+
+**Admin Dashboard page**
+
+The admin menu/dashboard is one the principal interface in SDX. It backs up admin features well and with clear routes to manage users, payments, messages, and events. Security is also assured as the information is visible only to authenticated users to shield informative information. The HTML structure used Bootsrap as well as Animate.css to offer an attractive, responsive interface that morphs efficiently across devices. 
+The critical elements are brought to one click with straightforward navigation and icons clearly marked increasing user engagement and efficiency. The Owl Carousel and Magnific Popup scripts add more interactivity to the Dashboard while the media queries amp a part of the design to cater for the optimal performance of the Dashboard across various environments. It is the very reason that makes the dashboard a necessary tool, ensuring that administration is well achieved in an effective and efficient.
+
+![image](https://github.com/user-attachments/assets/23689696-47d9-41c7-a2f8-bea24a51d234)
+![image](https://github.com/user-attachments/assets/c1e983d4-e56e-4d41-a204-f507975371ec)
+![image](https://github.com/user-attachments/assets/273d28ee-b0da-4bb1-aa07-aaae499dbc9e)
+![image](https://github.com/user-attachments/assets/7ce54acd-d799-4735-9114-701175423db3)
+
+**Admin all users list page:**
+
+‘All Users’ interface for easy handling of users on SDX platform. The admin can update and delete users through the flask route, http://127.0.0.1:5000/alluser , which fetches data modularly to be displayed in a table in the users.html template. The aesthetics of the user interface have been improved with an HTML setup that includes a graphic design feature. It is composed of a background image, and corresponding graphic color schemes through formatting, which helps readability. The interface has been natively made responsive to allow the user, at a glance, to search for the user. All these come together, having a back-end that processes data correctly, user interaction that is intuitive, and an interface that is visually appealing and coherent.
+
+![image](https://github.com/user-attachments/assets/f50ad2ac-a4af-4fd8-b3bf-cd75f2590341)
+
+
+
+
