@@ -66,13 +66,14 @@ After full all information & check i read .... the button will be Enable:
 
 **Student Dashboard page:**
 
-  The menu of services for the student is represented in the student dashboard, after the successful login, and the system checks that the role of the user is equal to 1, the SDX redirects to: http://127.0.0.1:5000/dashboard The first part of the interface shows the username of the user and the option to logout, the logo (redirects you to the home page), and the Contact Us service.
+The menu of services for the student is represented in the student dashboard, after the successful login, and the system checks that the role of the user is equal to 1, the SDX redirects to: http://127.0.0.1:5000/dashboard The first part of the interface shows the username of the user and the option to logout, the logo (redirects you to the home page), and the Contact Us service.
 ![image](https://github.com/user-attachments/assets/d59c8792-0063-413b-9f19-fd505c6e1cb0)
 
 ![image](https://github.com/user-attachments/assets/eadaa767-0c8f-4e8a-97f4-863ac7317907)
 
 
 **Profile Page & Update Page & Reply Admin Page:**
+
 The interface of the profile shows the information for the current user (birthday, username, age, major, room type, room number …). Also, it contains a counter (number 1 in Figure 2.11) for the payment made by the current user.
 
 ![image](https://github.com/user-attachments/assets/510594b3-b990-4f58-9d08-cd87c2684266)
@@ -81,7 +82,7 @@ After Click on 'Update' Button:
 
 ![image](https://github.com/user-attachments/assets/7c853335-5dba-49f7-ba62-53eb1aa3420e)
 
-After Click on --'Message'-- Button:
+After Click on 'Message' Button:
 
 ![image](https://github.com/user-attachments/assets/dfecc4c8-3d8d-4ef9-8837-4da272ce4182)
 
