@@ -135,6 +135,67 @@ The critical elements are brought to one click with straightforward navigation a
 
 ![image](https://github.com/user-attachments/assets/f50ad2ac-a4af-4fd8-b3bf-cd75f2590341)
 
+**Admin all payments list page:**
 
+The payment details list under URL: http://127.0.0.1:5000/adpayments , securely shows all payment records, thereby giving the administrators the power and capability for financial management right in this educational platform. Authenticated through Python Flask, this interface uses the adpayment.html template to list payments as per date, with other added features for updating and deleting. It has been designed with a dynamic view—made animated and fully responsive—thereby uplifting usability to the users by incorporating searchable facilities, which simply make navigation as simple as possible with the least fuss. In this way, a marriage of firm, back-end functionality with a friendly, engaging, and intuitively designed front end will give a solution functionally designed but easy to use in practice, making management of payments easier.
 
+![image](https://github.com/user-attachments/assets/6f78d268-3483-495d-9f13-54d77caefb08)
+
+**Admin all messages page:**
+
+In an SDX system, the admin panel's "All Messages" tab optimally deals with user communications, aggregating data from two sources by means of Python Flask and rendering the resultant page in the showmssgs.html template. The interface will be responsive, so it can be resized, and the table will support quick filtering to get more details on messages regarding ID, user info, problem, and date. Any communication with the authorities is made aware of immediately. Flask secures the backend processes and makes them efficient. An HTML and CSS template makes it remain usable and nice-looking on every device, with an easy and seamlessly smooth process of dealing with communications for the administrator.
+
+![image](https://github.com/user-attachments/assets/c76fe663-073a-4b5e-8b57-6a97d6ccb017)
+![image](https://github.com/user-attachments/assets/2c7cdeed-ca61-45dc-8090-438e10b42a56)
+
+**Admin all reply message page:**
+
+Communication can be better practiced with the 'Message to the Admin' feature of an admin dashboard: An admin can see and manage messages sent by any user. Developed with Python Flask in a very secure way, this section is built on user authentication and makes use of Flask's ORM for filtering messages addressed to the currently logged in admin. In the interface made, using the template replyuser.html, we made it of a simple but very user-friendly nature. There is a search feature, so navigation and managing communication become truly a breeze. Unified table format for messages, which emphasizes content of the reply, text, and date. The table also allows for some quick options: replying to a message or deleting one. Properly, the design fits the aesthetics of the entire platform. It uses a full-background image and the same consistency of styling. But yeah, the interface should, literally, be a feast for the eyes.
+
+![image](https://github.com/user-attachments/assets/3cfe3f99-7a0e-4d66-9c8f-67d6e2a54352)
+
+**Admin event control:**
+
+The events controller, done through Python Flask, remains important in handling the content relevant to events in an educational platform. This is accessed through the /eventcontrol route, using the ORM capabilities of Flask, to fetch a list of events, ordered by the IDs, from the database. Additional information in a table for each of the listed events includes the ID of the event, its title, details, and, if an image is related to the event, an associated image is shown in detail for a more advanced and engagement-inducing setting to the administrators. The design also comes with searching functionality which enables filtering of events in a more effortless way. This is in regard to the fact that it becomes easier for the administrator to edit and delete an event's entry without the need to go to the update or delete page for such a purpose. The design comes in with a stylish CSS file and a dynamic background image that makes the design of the interface as good-looking as it is functional, with a perfect harmony in the general look and feel of the back-end interface.
+
+![image](https://github.com/user-attachments/assets/c60ebf68-8a6f-46f2-91a7-b679b291e6fc)
+
+**Admin update user:**
+
+The "Update User" interface in the admin dashboard is an important part of the dynamical management of user profiles—in support from Python Flask, of course. Accessed under the route /updateuserad/<int:id>, again, this will require user authentication for secure access. The back end of the route fetches user details via User.query.get_or_404(id) and available room options from Rooms in a dynamic fashion, depending on input by the user. This thereby allows the admin to change user detail such as username, room assignments, gender, and other personal details in a form of POST request—since changes happen on room occupancy and the database is updated.
+Next, there is a form included with a friendly interface that selects the available room options dynamically depending on the room type chosen in the form, courtesy of JavaScript. This aides user functionality by reducing work done when choosing. This HTML layout follows mostly the general look of a base template, so the general look of the page remains consistent throughout the platform. A background image has been put in place to make the page more attractive; throughout, the CSS file linked in the block of the head is very clean and follows the general aesthetics of the site. The form is complete, and it includes all information regarding the user, and a submit function applies to the completion of updates. With this setup, both the update process of the user and practical and available interface for administrative purposes have been facilitated.
+
+![image](https://github.com/user-attachments/assets/73c96eae-4d04-4690-a7e2-5fd6214be19f)
+
+**Admin update payment**
+
+The most important core functionality developed for efficient management attributes of payment, hence the admin dashboard interface, is developed with Python Flask, specifically "Update Payment". This is a secured route /updatpayAdmin/<int:id> which requires logins and ensures that only authenticated admins can access and manipulate the payment data. The form, which is furnished to the user on the adupdatepay.html template, updates major payment attributes: ID, service, amount, card type, and card number. In that connection, POST requests when submitting changes are handled by the Flask backend, hosting effective error handling so to control the database commit operation and show the proper feedback in case of failures. First and foremost, this view maintains consistency of user interface, as it is pretty much basic from a base HTML template, adds attractiveness while styled with CSS, and linked with dropdowns and input fields for efficient updates, and most of all includes the footer link to navigate back to the admin dashboard easily. This ooze implements a strong Flask back-end with a simple front end in taking the details of the payment to be managed effectively, yet keeping it intuitive and secure for the users.
+
+![image](https://github.com/user-attachments/assets/8d74bdbe-0541-4278-adae-a3ee69fd9dd5)
+
+**Admin Reply user**
+
+The admin dashboard's user interface, which is the "Reply Admin", spaces communication in a way that allows the administrators to reply with no hustle to inquiries made by the user. This is a secure Python Flask application that requires user authentication. At the back end, this interface fetches one message from the table Contactuser and displays it in the form in the contactad.html template for the administrator to write and send the reply. The workflow is smooth since, upon making a POST request, the response of the administrator will be updated in the database and a redirection to the confirmation page by the user.
+A simple and clean form within a neat and organized layout, which flows out from a rudimentary template, makes the application more engagingly communicative in its HTML setup. A form is used to show the original message and lets the user type the response in a textarea element, and then a submit button follows, which forwards the response. Aesthetic styling is done with CSS to drive effective user appeal and interaction, followed by a footer for easy navigation back to the main admin or user dashboard, dependent on the user's role. The interface is built super clean with basic workflow, making it ridiculously easy for an admin to get back to a user with effective communication and having full backup of powerful data handling of Flask. 
+
+![image](https://github.com/user-attachments/assets/10c89d08-8c85-4ae1-9134-121a1b03a6d9)
+
+**Admin add event**
+
+The most recently added events are added through the "Add Event" on the admin dashboard in creating a simple user interface. This can be supported with Python Flask, where administrators are allowed to key in the event's title, specifics, and upload any relevant images, through a Multipart form, when events are being created. The configuration of backend Flask ensures that the uploaded images are to be stored within a particular folder. It also validates the types of files uploaded for system integrity. For successful POST requests, the details of the event are saved on the database, and, in case of an error, error handling is implemented.
+The HTML structure built on top of the base template is modern and increases the amount of visual and user interaction on the web page made. Navigation is made a breeze by the intuitively laid forms where derivations are made upon addition of JavaScript enhancements that lead to ensured correct form fields before submission. It comes with Bootstrap and other libraries for CSS in order to give adaptive looks and styles while including JavaScript plug-ins for functional builds that produce an increase in the level of improvement, including form validation and dynamic UI updates. The interface combines the strong server-side capabilities of Flask and advanced frontend technologies into an effective whole, providing a highly functional, secure, and engaging user experience when managing events.
+
+![image](https://github.com/user-attachments/assets/4c7afe80-d213-4868-828a-b313edd46729)
+
+**Admin update event**
+
+The "Update Event" interface is robust in allowing details of events to be manipulated using the admin dashboard. Python Flask provides the muscle in the backend. Through this feature, a further layer of security and the ability for the administrator to update the details of events is upon the administrator, who can now safely update the details of the events using a form with features to upload files provided the upload directory, and file type validation to enable storing of valid image files, is guaranteed by the Flask setup and configuration. The HTML form with features to upload files is represented in a multipart data form. The contents of the multipart data form are styled with CSS to give it a professional outlook. Truly, in the mechanics, the system directly interfaces continuously with the backing Flask provides and saves the updates into a preset directory. Documentation is not only made easier on this configuration but enriches the ability of the administrator to have information about events updated and thus dynamically situates the site tops with usability and security features.
+
+![image](https://github.com/user-attachments/assets/ff2c282a-515d-4d12-8e07-3f896a51f2d9)
+
+**Forget Password:**
+
+A good example is the robust mechanism in the SDX platform password management system that allows a user to reset and update his or her password, backed up by Python Flask. This process starts when a user sends a request to reset his or her password Fig 5.35 and enters his or her email address. If there is an email which belongs to a valid user account, then the system tries to send one email having a link to reset the password Fig 5.36 by calling the function send_reset_email. This function builds an HTML email embedding an inline image and sends it to the previously configured mail server. Users will be able to receive new passwords safely on /resetpassword/<int:idusr> passing a new password that will be stored in the database in hashed form from bcrypt. The password reset and change HTML form is of simple design and styled to be user-friendly with CSS, and embedded within the template extension from a base layout in order to keep the platform uniform. This will leave not only a robust approach to handling password changes but also be made very intuitive from a user experience viewpoint, with clear ways to navigate back to the login page, covered in minimal yet effective frontend design elements.
+
+![image](https://github.com/user-attachments/assets/635be3eb-d39d-462a-8ca8-0e8836995632)
 
