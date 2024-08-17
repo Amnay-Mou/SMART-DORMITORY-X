@@ -199,3 +199,43 @@ A good example is the robust mechanism in the SDX platform password management s
 
 ![image](https://github.com/user-attachments/assets/635be3eb-d39d-462a-8ca8-0e8836995632)
 
+
+**DATABASE**:
+MySQLWorkbench interface:
+
+![MySQLWorkbench_1TVdpqMif9](https://github.com/user-attachments/assets/43925239-dff9-4bbf-93e1-263b1b3ee3a0)
+
+To collect informaion enter by the use to the database (MySQL) simple process:
+
+HTML Code:
+-> <div class="home-user">
+     <span class="home-text">Username:</span>
+     <input id="username" name="username" type="text" required="true" placeholder="User" class="home-user1 input"/>
+   </div>
+   <div class="home-pass">
+     <span class="home-text01">Password:</span>
+     <input id="password" name="password" type="password" required="true" placeholder="Password" class="home-user2 input"/>
+   </div>
+
+Python Code:
+-> @app.route('/login', methods=['GET', 'POST'])
+   def login():
+       info = None
+       error = None
+       events = Event.query.all()
+       if request.method == 'POST':
+           username = request.form.get('username')
+           password = request.form.get('password')
+           user = User.query.filter_by(username=username).first()
+           if user and bcrypt.check_password_hash(user.password, password):
+               login_user(user)
+               if user.role == 0:  # Check if the user is an admin
+                   return redirect(url_for('admin_dashboard'))
+               else:
+                   return redirect(url_for('dashboard'))
+           else:
+               error = "Invalid username or password"
+               return render_template('After intro.html', error=error)
+       return render_template('After intro.html', events=events)
+
+  The process of collecting data from an HTML interface and storing it in a MySQL database using Python Flask involves several key steps. First, the HTML form captures user input through fields like username and password, which are assigned specific name attributes. When the form is submitted, this data is sent to the server via an HTTP POST request. In the Flask application, the login function handles this request, retrieving the entered data using request.form.get(). The username is then used to query the database for a matching user record, and the password is verified against the stored hash. If the credentials are valid, the user is logged in and redirected to the appropriate dashboard. This process ensures that user input is securely collected, processed, and authenticated against the database, adhering to best practices like password hashing.
