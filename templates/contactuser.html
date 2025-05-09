@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Task Master</title>
+<link rel="shortcut icon" href= "{{ url_for('static', filename='img/logo.png') }}" type="image/x-icon">
+<link rel="stylesheet" href= "{{ url_for('static', filename='css/updt.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Contact <span>User</span></h1>
+    <div class="form">
+        <form action="/contactuser/{{mssg.iduser}}" method="POST">
+            <span>Hello {{mssg.iduser}}</span> <!-- i want username -->
+            <br><span>Message: </span><textarea name="message" id="message" required></textarea>
+
+            <input type="submit" value="Send">
+        </form>
+    </div>
+</div>
+<br><br><br><footer class="ttt"><a title="Go back to Menu" href="{{ url_for('admin_dashboard') }}"><img src="{{ url_for('static', filename='img/daxb.png') }}"></a>SDX Menu</footer>
+
+{% endblock %}

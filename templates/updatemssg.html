@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Task Master</title>
+<link rel="shortcut icon" href= "{{ url_for('static', filename='img/logo.png') }}" type="image/x-icon">
+<link rel="stylesheet" href= "{{ url_for('static', filename='css/updt.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Update Message</h1>
+
+    <div class="form">
+        <form action="/updateadmssg/{{mssg.idmssg}}" method="POST">
+            <span>Message ID: </span><input type="number" name="idmssg" id="idmssg" value="{{mssg.idmssg}}" required readonly>
+            <span>User ID: </span><input type="number" name="userid" id="userid" value="{{mssg.userid}}" required>
+            <span>Problem : </span><input type="text" name="problem" id="problem" value="{{mssg.problem}}" required readonly>
+            <span>Message : </span><input type="text" name="message" id="message" value="{{mssg.message}}" required>
+            <span>Date: </span><input type="datetime-local" name="date" id="date" value="{{mssg.date}}" required>
+            <div class="checkbox-container">
+                <input type="checkbox" name="emergency" id="emergency" {% if mssg.emergency %} checked {% endif %} value="true">
+                <span>Emergency</span>
+            </div>
+            <input type="submit" value="Update">
+        </form>
+    </div>
+</div>
+<br><br><br><footer class="ttt"><a title="Go back to Menu" href="{{ url_for('admin_dashboard') }}"><img src="{{ url_for('static', filename='img/daxb1.png') }}"></a>SDX Menu</footer>
+{% endblock %}
+

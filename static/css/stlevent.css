@@ -1,0 +1,177 @@
+.info {
+    width: 18px;
+    height: 18px;
+}
+.siz{
+    font-size:30px;
+}
+h1{
+    color:#ffff;
+
+}
+table {
+    margin: 30px;
+    padding: 5px;
+}
+.title {
+  font-size: 60px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: 800;
+  margin: 150px;
+}
+
+.aa {
+    background-image: -webkit-linear-gradient(45deg, #57B6E5 17%, #1E678C 63%, #57B6E5 100%);
+    padding: 10px 49px;
+    font-weight: 600;
+    right: 0px;
+    border-radius: 25px;
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+h4{color:#fff;}
+
+a {
+    color: white;
+}
+
+.ttt {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     color: #fff;
+    }
+.ttt img {
+    vertical-align: middle;
+}
+span{
+    color: #f39d92;
+}
+.left{
+    text-align: left;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+table {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    background-color: transparent;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+th {
+    background-color: #AC6A62;
+    color: #fff;
+}
+
+td {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+td img {
+    width: 250px;
+    height: auto;
+}
+
+.search {
+    margin: 20px;
+    padding: 10px;
+}
+
+.search input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.search button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.search button:hover {
+    background-color: #45a049;
+}
+
+.footer {
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer img {
+    vertical-align: middle;
+}
+
+.highlight {
+    background-color: red;
+}
+
+.search {
+        text-align: left;
+        margin-bottom: 20px;
+        padding-left:50px;
+    }
+
+.search input[type="text"] {
+        padding: 10px;
+        width: 300px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+}
+
+.search button {
+        padding: 10px 20px;
+        border-radius: 5px;
+        background-color: #65C5D0;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        margin-left: 10px;
+}
+
+img:hover {
+    transform: scale(2.3);
+}
+
+a:hover {
+    text-size: 20px;
+}
+
+.search button:hover {
+        background-color: #45a049;
+}

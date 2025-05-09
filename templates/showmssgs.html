@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>All Messages</title>
+<link rel="shortcut icon" href= "{{ url_for('static', filename='img/logo.png') }}" type="image/x-icon">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/stl.css') }}">
+<style>
+    html{
+        background-image: url('/static/img/bgmssg.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+<div class="ALL">
+    <h1 style="text-align: center">Messages <span>By USERs In Platform</span></h1>
+    <div class="search">
+        <form action="/searchmssg" method="GET">
+            <input type="text" name="query" placeholder="Search messages">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    {% if show2|length < 1 %}
+    <h4 style="text-align: center">There are no tasks. Create one below!</h4>
+    {% else %}
+    <table>
+        <tr>
+            <th>Message ID</th>
+            <th>User ID</th>
+            <th>Problem</th>
+            <th>Message</th>
+            <th>Date</th>
+            <th>Emergency</th>
+        </tr>
+        {% for see2 in show2 %}
+            <tr>
+                <td>{{ see2.idmssg }}</td>
+                <td>{{ see2.userid }}<a href="/info/{{see2.userid}}"><img class="info" src="{{ url_for('static', filename='img/info.png') }}"></a></td>
+                <td>{{ see2.problem }}</td>
+                <td class="left">{{ see2.message }}</td>
+                <td>{{ see2.date }}</td>
+                <td style="background-color: {% if see2.emergency %} #F12E17 {% endif %}">{{ see2.emergency }}</td>
+                <td>
+                    <br>
+                    <a href="/dlte/{{see2.idmssg}}">Delete</a>
+                    <br>
+                    <a href="/updateadmssg/{{see2.idmssg}}">Update</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+<br><br>
+  <h1 style="text-align: center">Messages <span>From Home page</span></h1>
+    {% if show1|length < 1 %}
+    <h4 style="text-align: center">There are no tasks. Create one below!</h4>
+    {% else %}
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Email</th>
+            <th>Problem</th>
+            <th>Message</th>
+            <th>Date</th>
+        </tr>
+        {% for see in show1 %}
+            <tr>
+                <td>{{ see.id }}</td>
+                <td>{{ see.email }}</td>
+                <td>{{ see.problem }}</td>
+                <td class="left">{{ see.message }}</td>
+                <td>{{ see.date }}</td>
+                <td>
+                    <br>
+                    <a href="/dltedfltmssg/{{see.id}}">Delete</a>
+                    <br>
+                    <a href="/dfltmssgupdatead/{{see.id}}">Update</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+
+</div>
+<br><br><br><footer class="ttt"><a title="Go back to Menu" href="admin_dashboard" target="_blank"><img src="{{ url_for('static', filename='img/daxb1.png') }}"></a>SDX Menu</footer>
+{% endblock %}

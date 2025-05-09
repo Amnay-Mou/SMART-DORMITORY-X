@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Update Dflt Message</title>
+<link rel="shortcut icon" href= "{{ url_for('static', filename='img/logo.png') }}" type="image/x-icon">
+<link rel="stylesheet" href= "{{ url_for('static', filename='css/updt.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Update Default Message</h1>
+
+    <div class="form">
+        <form action="/dfltmssgupdatead/{{dfltmssg.id}}" method="POST">
+            <span>Message ID: </span><input type="number" name="id" id="id" value="{{dfltmssg.id}}" required readonly>
+            <span>Email: </span><input type="email" name="Email" id="email" value="{{dfltmssg.email}}" required>
+            <span>Problem: </span><input type="text" name="problem" id="problem" value="{{dfltmssg.problem}}" required>
+            <span>Message: </span><input type="text" name="message" id="message" value="{{dfltmssg.message}}" required>
+            <span>Date: </span><input type="datetime-local" name="date" id="date" value="{{dfltmssg.date}}" required>
+            <input type="submit" value="Update">
+        </form>
+    </div>
+</div>
+<br><br><br><footer class="ttt"><a title="Go back to Menu" href="{{ url_for('admin_dashboard') }}"><img src="{{ url_for('static', filename='img/daxb.png') }}"></a>SDX Menu</footer>
+{% endblock %}
+

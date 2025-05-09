@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="english">
+    <title>Payment</title>
+    <link rel="shortcut icon" href= "{{ url_for('static', filename='img/logo.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/animate.css') }}">
+    <!-- ==========Banner-Section========== -->
+        <section class="main-page-header speaker-banner bg_img" data-background="{{ url_for('static', filename='assets/images/banner/banner07.jpg') }}">
+            <div class="container">
+                <div class="speaker-banner-content">
+                    <h2 class="title">Hello <span class="usr">{{ username }}</span><span class="siz">, Add new Payment</span></h2>
+                </div>
+            </div>
+        </section>
+        <!-- ==========Banner-Section========== -->
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta property="twitter:card" content="summary_large_image" />
+
+        <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/all.min.css') }}">
+        <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/animate.css') }}">
+        <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/flaticon.css') }}">
+        <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/magnific-popup.css') }}">
+        <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/odometer.css') }}">
+        <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/owl.carousel.min.css') }}">
+        <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/owl.theme.default.min.css') }}">
+        <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/nice-select.css') }}">
+        <link rel="stylesheet" href= "{{ url_for('static', filename='css/payinfo.css') }}">
+    </head>
+    <div class="ALL">
+            <div class="containere">
+                <form action="/addpayment" method="POST">
+                    <div class="one">
+                        <label>Amount :</label>
+                        <input type="number" name="amount" id="amount" required="true">
+                    </div>
+                    <div class="two">
+                        <label>Service :</label>
+                        <select name="service" id="service" required="true">
+                            <option value="payment">payment</option>
+                            <option value="Reparation">Reparation</option>
+                            <option value="Refund">Refund</option>
+                        </select>
+                    </div>
+                    <div class="three">
+                        <label>User ID :</label>
+                        <input type="number" name="userid" id="userid" value="{{ id }}" readonly>
+                    </div>
+                    <div class="fifth">
+                        <label>Card Type :</label>
+                        <select name="cardtype" id="cardtype" required="true">
+                            <option value="Visa card">Visa card</option>
+                            <option value="Master card">Master card</option>
+                            <option value="UnionPay Card">UnionPay Card</option>
+                        </select>
+                        <span id="error1"></span>
+                    </div>
+                    <div class="fourth">
+                        <label>Card Number :</label>
+                        <input type="number" name="cardnum" id="cardnum" required>
+                        <span id="error2"></span>
+                    </div>
+
+                    <input type="submit" value="PAY" class="bttn">
+                </form>
+            </div>
+        <br><br><br>
+        <footer class="ttt"><a title="Go back to Menu" href="{{ url_for('dashboard') }}">
+            <img src="{{ url_for('static', filename='img/daxb1.png') }}"></a>SDX Menu
+        </footer>
+        <!-- need to check if admin ot normal user -->
+        </div>
+    <script>
+            function scrollToTop() {
+              window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+              });
+            }
+    </script>
+    <script src= "{{ url_for('static', filename='assets/js/main.js') }}"></script>
+    <script>
+        function scrollToTop() {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        }
+    </script>
+    <script>
+        const input = document.getElementById("cardid");
+        const error = document.getElementById('error2');
+        const regex = /[\\\/:*?"<>|]+/;
+
+        input.addEventListener('input', (e) => {
+          const value = e.target.value;
+
+          if (regex.test(value)) {
+            input.value = value.slice(0, value.length - 1);
+            error.textContent = 'A filename cannot contain any of the following characters: \/:*?"<>|';
+          } else {
+            error.textContent = '';
+          }
+        });
+    </script>
+    <script src= "{{ url_for('static', filename='assets/js/jquery-3.3.1.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/modernizr-3.6.0.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/plugins.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/heandline.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/isotope.pkgd.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/magnific-popup.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/owl.carousel.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/wow.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/countdown.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/odometer.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/viewport.jquery.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/nice-select.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/main.js') }}"></script>
+</html>

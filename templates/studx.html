@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="english">
+  <head>
+    <title>Student dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <link rel="shortcut icon" href= "{{ url_for('static', filename='img/logo.png') }}" type="image/x-icon">
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/animate.css@4.1.1/animate.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alata:wght@400&amp;display=swap" data-tag="font"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" data-tag="font"/>
+    <link rel="stylesheet" href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/animate.css@4.1.1/animate.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alata:wght@400&amp;display=swap" data-tag="font"/>
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/all.min.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/animate.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/flaticon.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/odometer.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/nice-select.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/jquery.animatedheadline.css') }}">
+
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/main.css') }}">
+  </head>
+  <!-- ==========Banner-Section========== -->
+    <section class="banner-section">
+        <div class="banner-bg bg_img bg-fixed" data-background="{{ url_for('static', filename='assets/images/banner/brn.jpg') }}" ></div>
+        <div class="container">
+            <div class="banner-content">
+                <h1 class="title  cd-headline clip"><span class="d-block">Welcome </span>
+                    <span class="color-theme cd-words-wrapper p-0 m-0">
+                        <b class="is-visible">{{ username }}</b>
+                        <b>{{ date_created }}</b>
+                    </span>
+                </h1>
+                <p>...</p>
+            </div>
+        </div>
+    </section>
+  <!-- ==========Banner-Section========== -->
+  <body>
+    <link rel="stylesheet" href= "{{ url_for('static', filename='css/style3.css') }}" />
+    <div>
+      <link href="{{ url_for('static', filename='css/studx.css') }}" rel="stylesheet" />
+      <div class="home-container">
+        <div class="home-home">
+          <div class="home-up"></div>
+          <div class="home-services">
+            <div class="home-service2">
+                <span class="home-text02">
+                    <span>
+                        <a class="acol" href="/persinfo">Profile</a>
+                    </span>
+                </span>
+                {% if gender.lower() in ['m', 'male'] %}
+                    <a href="/persinfo"><img alt="Man" src="{{ url_for('static', filename='img/m.png') }}" class="home-rectangle31"/></a>
+                {% elif gender.lower() in ['f', 'female'] %}
+                    <a href="/persinfo"><img alt="Woman" src="{{ url_for('static', filename='img/f.png') }}" class="home-rectangle31"/></a>
+                {% else %}
+                    <!-- Default image or alternative content if gender is not specified or recognized -->
+                {% endif %}
+            </div>
+            <div class="home-service1">
+              <span class="home-text"><span><a class="acol" href="/payment">Pay</a></span></span>
+              <a href="/payment"><img alt="Rectangle39821" src="{{ url_for('static', filename='img/pay.png') }}" class="home-rectangle3"/></a>
+            </div>
+            <div class="home-service3">
+              <span class="home-text04"><span><a class="acol" href="/ctctus">Contact Admin</a></span></span>
+              <a href="/ctctus"><img alt="Rectangle39824" src="{{ url_for('static', filename='img/contactus.png') }}" class="home-rectangle32"/></a>
+            </div>
+            <div class="home-service4">
+              <span class="home-text06"><span><a class="acol" href="/baseinfo">Coming soon</a></span></span>
+              <a href="/baseinfo"><img alt="Rectangle39833" src="{{ url_for('static', filename='img/comingsoon.png') }}" class="home-rectangle33"/></a>
+            </div>
+          </div>
+          <!-- ==========Header-Section========== -->
+        <header class="header-section">
+            <div class="container">
+                <div class="header-wrapper">
+                    <div class="logo">
+                        <a href="/login">
+                            <img src= "{{ url_for('static', filename='img/logo.png') }}" alt="logo">
+                        </a>
+                    </div>
+                    <ul class="menu">
+                        <li>
+                            <a href="/login" class="active">Home</a>
+                        </li>
+<!--                        <li>-->
+<!--                            <a href="#0">Category</a>-->
+<!--                            <ul class="submenu">-->
+<!--                                <li>-->
+<!--                                    <a href="allevents">Events</a>-->
+<!--                                </li>-->
+<!--                                <li>-->
+<!--                                    <a href="allmovies">Movies</a>-->
+<!--                                </li>-->
+<!--                                <li>-->
+<!--                                    <a href="allsports">Sports</a>-->
+<!--                                </li>-->
+<!--                            </ul>-->
+<!--                        </li>-->
+                        <li>
+                            <a href="pgaboutws">About Us</a>
+                        </li>
+<!--                        <li>-->
+<!--                            <a href="ctctus">Contact Us</a>-->
+<!--                        </li>-->
+                        <li class="header-button pr-0">
+                            <a href="{{url_for('logout')}}">Logout</a>
+                        </li>
+                    </ul>
+                    <div class="header-bar d-lg-none">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- ==========Header-Section========== -->
+<!--          <div class="home-head">-->
+<!--            <div class="home-frame2">-->
+<!--              <div class="home-butthead">-->
+<!--                <img alt="Rectangle59838" src="public/external/rectangle59838-bmxa-200h.png" class="home-rectangle5"/>-->
+<!--                <img alt="Rectangle69839" src="public/external/rectangle69839-7na-200h.png" class="home-rectangle6"/>-->
+<!--                <img alt="Rectangle49837" src="public/external/rectangle49837-d6m-200h.png" class="home-rectangle4"/>-->
+<!--              </div>-->
+<!--              <img alt="Ellipse19836" src="{{ url_for('static', filename='img/logo.png') }}" class="home-ellipse1"/>-->
+<!--            </div>-->
+<!--          </div>-->
+          <div class="home-foter">
+            <div class="home-frame1">
+              <div class="home-icons">
+                <a href="/baseinfo"><div class="home-wechat">
+                  <div class="home-group">
+                    <img alt="Vector2023" src="{{ url_for('static', filename='img/wechatt.png') }}" class="home-vector"/>
+                  </div>
+                </div></a>
+                <a href="/baseinfo"><img alt="facebook2025" src="{{ url_for('static', filename='img/facebook3130-4cme.svg') }}" class="home-facebook"/></a>
+                <a href="/baseinfo"><div class="home-x">
+                  <div class="home-group1">
+                    <img alt="Vector2030" src="{{ url_for('static', filename='img/vector3129-ykld.svg') }}" class="home-vector3"/>
+                  </div>
+                </div></a>
+                <a href="/baseinfo"><div class="home-linkding">
+                  <div class="home-linkdinx2-csocialx2-cmediax2-clogo">
+                    <img alt="Vector2033" src= "{{ url_for('static', filename='img/vector3134-svvl.svg') }}" class="home-vector4"/>
+                  </div>
+                </div></a>
+              </div>
+              <div class="home-text12">
+                <span class="home-text13"><a href="/baseinfo">privacy policy</a></span>
+                <span class="home-text14">
+                  <span class="home-text15"><a href="/baseinfo">Terms &amp; conditions</a></span>
+                  <span></span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <button class="floating-button" onclick="scrollToTop()">&uarr;</button>
+  <div class="theme-switcher-button" id="theme-switcher-button">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+      <path fill="currentColor" d="M352 0H32C14.33 0 0 14.33 0 32v224h384V32c0-17.67-14.33-32-32-32zM0 320c0 35.35 28.66 64 64 64h64v64c0 35.35 28.66 64 64 64s64-28.65 64-64v-64h64c35.34 0 64-28.65 64-64v-32H0v32zm192 104c13.25 0 24 10.74 24 24 0 13.25-10.75 24-24 24s-24-10.75-24-24c0-13.26 10.75-24 24-24z"></path>
+    </svg>
+  </div>
+  <div class="theme-switcher-wrapper" id="theme-switcher-wrapper"><span>Themes color</span>
+    <ul>
+      <li><em class="is-active" data-theme="orange"></em></li>
+      <li><em data-theme="green"></em></li>
+      <li><em data-theme="purple"></em></li>
+      <li><em data-theme="blue"></em></li>
+    </ul>
+  </div>
+  </body>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}" ></script>
+
+    <script>
+        function scrollToTop() {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        }
+    </script>
+    <script src= "{{ url_for('static', filename='assets/js/jquery-3.3.1.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/modernizr-3.6.0.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/plugins.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/heandline.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/isotope.pkgd.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/magnific-popup.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/owl.carousel.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/wow.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/countdown.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/odometer.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/viewport.jquery.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/nice-select.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/main.js') }}"></script>
+</html>

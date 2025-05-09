@@ -1,0 +1,296 @@
+{% extends 'base.html' %}
+{% block head %}
+<html lang="english">
+  <header>
+    <title>SDX</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+      }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/animate.css@4.1.1/animate.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alata:wght@400&amp;display=swap" data-tag="font"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alata:wght@400&amp;display=swap" data-tag="font"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abel:wght@400&amp;display=swap" data-tag="font"/>
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/all.min.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/animate.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/flaticon.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/odometer.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/nice-select.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/jquery.animatedheadline.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Allerta+Stencil:wght@400&amp;display=swap" data-tag="font"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" data-tag="font"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Allerta+Stencil:wght@400&amp;display=swap" data-tag="font"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" data-tag="font"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap" data-tag="font"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" data-tag="font"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" data-tag="font"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" data-tag="font"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abel:wght@400&amp;display=swap" data-tag="font"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" data-tag="font"/>
+    <link rel="stylesheet" href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"/>
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/main.css') }}">
+
+  </header>
+  <!-- ==========Header-Section========== -->
+        <header class="header-section">
+            <div class="container">
+                <div class="header-wrapper">
+                    <div class="logo">
+                        <a href="/login">
+                            <img src= "{{ url_for('static', filename='img/logo.png') }}" alt="logo">
+                        </a>
+                    </div>
+                    <ul class="menu">
+                        <li>
+                            <a href="/login" class="active">Home</a>
+                        </li>
+                        <li>
+                            <a href="pgaboutws">About Us</a>
+                        </li>
+                        <li>
+                            <a href="Message">Contact Us</a>
+                        </li>
+                        <li class="header-button pr-0">
+                            <a href="login">Join Us</a>
+                        </li>
+                    </ul>
+                    <div class="header-bar d-lg-none">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+  <!-- ==========Header-Section========== -->
+  {% endblock %}
+
+  {% block body %}
+  <!-- ==========Banner-Section========== -->
+    <section class="banner-section">
+        <div class="banner-bg bg_img bg-fixed" data-background="{{ url_for('static', filename='assets/images/banner/brn.jpg') }}" ></div>
+        <div class="container">
+            <div class="banner-content">
+                <h1 class="title  cd-headline clip"><span class="d-block">Smart Dorm X</span> IS
+                    <span class="color-theme cd-words-wrapper p-0 m-0">
+                        <b class="is-visible">Smart</b>
+                        <b>Save</b>
+                        <b>Your new Home</b>
+                    </span>
+                </h1>
+                <p>...</p>
+            </div>
+        </div>
+    </section>
+  <body>
+  <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <link rel="stylesheet" href= "{{ url_for('static', filename='css/style3.css') }}" />
+   <link rel="stylesheet" href= "{{ url_for('static', filename='css/studx.css') }}">
+    <div>
+      <link href= "{{ url_for('static', filename='css/index1.css') }}" rel="stylesheet" />
+
+      <div class="home-container">
+        <div class="home-home">
+          <div class="home-bodyy">
+            <div class="home-eventlogin">
+                <div class="home-login">
+                <div class="home-enteruserpass">
+                  <div class="home-user-pass">
+                    <form method="POST">
+                        {% if error %}
+                            <p class="flash-w"><strong>Error</strong>: {{ error }}</p>
+                        {% endif %}
+                        {% if info %}
+                            <p class="flash-v"><strong>Info</strong>: {{ info }}</p>
+                        {% endif %}
+                      <div class="home-user">
+                        <span class="home-text">Username:</span>
+                        <input id="username" name="username" type="text" required="true" placeholder="User" class="home-user1 input"/>
+                      </div>
+                      <div class="home-pass">
+                        <span class="home-text01">Password:</span>
+                        <input id="password" name="password" type="password" required="true" placeholder="Password" class="home-user2 input"/>
+                      </div>
+                      </div>
+                      </div>
+                      <div class="home-login-forget">
+                        <div class="home-pass-forgt">
+                          <a href="/forgetpassword"><label class="home-text03">I Forget password</label></a>
+                        </div>
+                        <button type="submit" name="action" id="btnlog" value="login" class="home-btn-login button" disabled>login</button>
+                    </form>
+                        <form action="/register">
+                          <button type="submit" name="action" value="register" class="home-btn-register button" >register</button>
+                        </form>
+                  </div>
+                </div>
+
+                {% for event in events %}
+                <div class="home-event">
+                    <img alt="Rectangle32038" src="{{ url_for('static', filename=event.picture) }}" class="home-pic-event"/>
+                    <div class="home-titl-event-dtls">
+                        <span class="home-titl-evnt">{{ event.title }}</span>
+                        <span class="home-event-details">{{ event.eventdetails }}</span>
+                    </div>
+                </div>
+                {% endfor %}
+                </div>
+            </div>
+          <div class="home-foter">
+            <div class="home-frame1">
+              <div class="home-icons">
+                <a href="/wechat"><div class="home-wechat">
+                  <div class="home-group">
+                    <img alt="Vector2023" src="{{ url_for('static', filename='img/wechatt.png') }}" class="home-vector0"/>
+                  </div>
+                </div></a>
+                <a href="https://www.facebook.com/profile.php?id=100071690329511"><img alt="facebook2025" src="{{ url_for('static', filename='img/facebook3130-4cme.svg') }}" class="home-facebook0"/></a>
+                <a href="/baseinfo"><div class="home-x">
+                  <div class="home-group1">
+                    <img alt="Vector2030" src="{{ url_for('static', filename='img/vector3129-ykld.svg') }}" class="home-vector30"/>
+                  </div>
+                </div></a>
+                <a href="https://www.linkedin.com/in/amnay-mou-809a37237/"><div class="home-linkding0">
+                  <div class="home-linkdinx2-csocialx2-cmediax2-clogo">
+                    <img alt="Vector2033" src= "{{ url_for('static', filename='img/vector3134-svvl.svg') }}" class="home-vector40"/>
+                  </div>
+                </div></a>
+              </div>
+              <div class="home-text12">
+                <span class="home-text13"><a href="/baseinfo">privacy policy</a></span>
+                <span class="home-text14">
+                  <span class="home-text15"><a href="/baseinfo">Terms &amp; conditions</a></span>
+                  <span></span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <button class="floating-button" onclick="scrollToTop()">&uarr;</button>
+  </body>
+
+    <script>
+        function scrollToTop() {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        }
+    </script>
+    <style>
+      #btnlog.enabled {
+        cursor: pointer;
+      }
+      #btnlog.disabled {
+        cursor: not-allowed;
+      }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        const password = document.getElementById('password');
+        const username = document.getElementById('username');
+        const btnlog = document.getElementById('btnlog');
+
+        const inputs = [password, username];
+
+        let timeoutId;
+
+        function checkInputs() {
+          clearTimeout(timeoutId);
+          timeoutId = setTimeout(function() {
+            const areInputsFilled = inputs.every(input => input.value !== '');
+            btnlog.disabled = !areInputsFilled;
+            if (btnlog.disabled) {
+              btnlog.classList.remove('enabled');
+              btnlog.classList.add('disabled');
+            } else {
+              btnlog.classList.remove('disabled');
+              btnlog.classList.add('enabled');
+            }
+          }, 100);
+        }
+        inputs.forEach(input => input.addEventListener('input', checkInputs));
+        checkInputs();
+      });
+    </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var events = document.querySelectorAll('.home-event');
+    var index = 0;
+
+    function showNextEvent() {
+        events[index].style.display = 'none';
+        var currentTitle = events[index].querySelector('.home-titl-evnt');
+        var currentDetails = events[index].querySelector('.home-event-details');
+        if (currentTitle) currentTitle.style.display = 'none';
+        if (currentDetails) currentDetails.style.display = 'none';
+        index = (index + 1) % events.length;
+        events[index].style.display = 'block';
+        var nextTitle = events[index].querySelector('.home-titl-evnt');
+        var nextDetails = events[index].querySelector('.home-event-details');
+        if (nextTitle) nextTitle.style.display = 'inline-block';
+        if (nextDetails) nextDetails.style.display = 'block';
+        setTimeout(showNextEvent, 2000);
+    }
+    events[index].style.display = 'block';
+    var initialTitle = events[index].querySelector('.home-titl-evnt');
+    var initialDetails = events[index].querySelector('.home-event-details');
+    if (initialTitle) initialTitle.style.display = 'inline-block';
+    if (initialDetails) initialDetails.style.display = 'block';
+    setTimeout(showNextEvent, 2000); // Start after 2 seconds
+});
+</script>
+    <script src= "{{ url_for('static', filename='assets/js/jquery-3.3.1.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/modernizr-3.6.0.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/plugins.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/heandline.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/isotope.pkgd.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/magnific-popup.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/owl.carousel.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/wow.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/countdown.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/odometer.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/viewport.jquery.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/nice-select.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/main.js') }}"></script>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.2.5/build/spline-viewer.js"></script>
+    <script src="{{ url_for('static', filename='js/scriptt.js') }}"></script>
+    <script src="https://unpkg.com/three@0.128.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/gsap@3.9.1/gsap.min.js"></script>
+{% endblock %}
+
+</html>

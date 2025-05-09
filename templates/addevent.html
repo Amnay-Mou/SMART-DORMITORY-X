@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/all.min.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/animate.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/flaticon.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/odometer.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/nice-select.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static', filename='assets/css/main.css') }}">
+
+    <link rel="shortcut icon" href= "{{ url_for('static', filename='img/logo.png') }}" type="image/x-icon">
+    <title>SDX - register</title>
+</head>
+<body>
+    <!-- ==========Preloader========== -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- ==========Preloader========== -->
+    <video autoplay muted loop id="myVideo">
+      <source src= "{{ url_for('static', filename='assets/video/back.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <!-- ==========Sign-In-Section========== -->
+    <section class="account-section bg_img">
+        <div class="container">
+            <div class="padding-top padding-bottom">
+                <div class="account-area">
+                    <div class="section-header-3">
+                        <span class="cate">welcome</span>
+                        <h2 class="title">SDX </h2>
+                    </div>
+                    <form class="account-form" action="addevent" method="post" enctype="multipart/form-data">
+<!--						<div class="form-group">-->
+<!--                            <label for="idevent">ID event<span>*</span></label>-->
+<!--                            <input type="number" placeholder="idevent" id="idevent" required name="idevent">-->
+<!--                        </div>-->
+                        <div class="form-group">
+                            <label for="title">Title<span>*</span></label>
+                            <input type="text" placeholder="title " id="title" required name="title">
+                        </div>
+						<div class="form-group">
+                            <label for="eventdetails">Event Details<span>*</span></label>
+                            <input type="text" placeholder="eventdetails"  id="eventdetails" required name="eventdetails">
+                        </div>
+                        <div class="form-group">
+                            <label for="picture">Picture<span>*</span></label>
+                            <input type="file" id="picture" required name="picture">
+                        </div>
+
+                        <div class="form-group text-center">
+                            <button type="submit" class="register-btn" id="registerBtn" disabled>Add event</button>
+                        </div>
+                    </form>
+
+                    <div class="or"><span>Thanks</span></div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==========Sign-In-Section========== -->
+    <script>
+	    const title = document.getElementById('title');
+	    const eventdetails = document.getElementById('eventdetails');
+	    const picture = document.getElementById('picture');
+	
+	    const inputs = [picture, eventdetails, title];
+	
+	    function checkInputs() {
+	      const areInputsFilled = inputs.every(input => input.value !== '');
+	      registerBtn.disabled = !(areInputsFilled);
+	    }
+	
+
+	    inputs.forEach(input => input.addEventListener('input', checkInputs));
+   </script>
+
+    <script src= "{{ url_for('static', filename='assets/js/jquery-3.3.1.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/modernizr-3.6.0.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/plugins.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/isotope.pkgd.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/magnific-popup.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/owl.carousel.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/wow.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/countdown.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/odometer.min.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/viewport.jquery.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/nice-select.js') }}"></script>
+    <script src= "{{ url_for('static', filename='assets/js/main.js') }}"></script>
+
+
+</body>
+
+</html>
