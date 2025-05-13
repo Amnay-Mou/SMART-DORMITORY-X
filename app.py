@@ -560,7 +560,7 @@ def register():
 
 
 # --------------------------LOGIN-------------------------------
-@app.route('/', methods=['GET', 'POST']) # login
+@app.route('/login', methods=['GET', 'POST']) # login
 def login():
     info = None
     error = None
